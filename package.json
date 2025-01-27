@@ -1,0 +1,36 @@
+{
+  "name": "apollo-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:demos": "npm start --workspace=demos",
+    "format": "npm run format --workspaces --if-present",
+    "format:write": "npm run format:write --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:fix": "npm run lint:fix --workspaces --if-present"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "engines": {
+    "node": ">=20.18"
+  },
+  "workspaces": [
+    "demos/",
+    "labs/"
+  ],
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "graphql": "^16.10.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@speedingplanet/eslint-config": "^0.0.8",
+    "@types/lodash": "^4.17.14",
+    "eslint": "^9.19.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2"
+  }
+}

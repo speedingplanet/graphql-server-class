@@ -7,7 +7,7 @@ These are the class files for the GraphQL Server using Apollo Server class
 Clone this repository.
 
 ```shell
-cd apollo-server
+cd graphql-server-class
 npm install
 npm run start:demos
 ```
@@ -16,7 +16,7 @@ You should see a message that looks like this:
 ```shell
 ❯ npm run start:demos
 
-> apollo-server@1.0.0 start:demos
+> graphql-server-class@1.0.0 start:demos
 > npm start --workspace=demos
 
 

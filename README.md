@@ -1,6 +1,6 @@
-# Apollo Server
+# GraphQL Server using Apollo Server
 
-These are the class files for the Apollo Server class. 
+These are the class files for the GraphQL Server using Apollo Server class
 
 ## Setup
 

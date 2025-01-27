@@ -36,6 +36,6 @@ Click on the "+" sign next to "Query", then the "+" under "Fields" next to "gree
 
 Locate the "▶️ Query" button in the upper-right corner of the middle panel. Click on it. The "Response" panel should fill in and your browser window should look like this:
 
-![Apollo Server Sandbox with a response](./.files/images/server-sandbox-query.png)
+![Apollo Server Sandbox with a response](./.files/images/server-sandbox-response.png)
 
 You have run a successful test of the server and you're done!

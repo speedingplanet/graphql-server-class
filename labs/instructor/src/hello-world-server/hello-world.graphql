@@ -1,0 +1,7 @@
+type Query {
+	sayHello: HelloWorld
+}
+
+type HelloWorld {
+	message: String
+}

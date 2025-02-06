@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"[LABS] Error: no test specified\" && exit 1"
+    "test": "echo \"[LABS] Error: no test specified\" && exit 1",
+    "hello-world:watch": "nodemon src/hello-world-server/index.js",
+    "instructor:watch": "nodemon instructor/src/hello-world-server/index.js"
   },
   "keywords": [],
   "author": "",

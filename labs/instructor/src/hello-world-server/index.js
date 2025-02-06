@@ -1,10 +1,10 @@
 // @ts-check
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
-import { resolvers } from './hello-world-resolvers';
-import { loadSchema } from '../load-schema';
+import { resolvers } from './hello-world-resolvers.js';
+import { loadSchema } from '../load-schema.js';
 
-const typeDefs = loadSchema('src/hello-world-server/hello-world.graphql');
+const typeDefs = loadSchema('./src/hello-world-server/hello-world.graphql');
 
 const server = new ApolloServer({
 	typeDefs, // Practically, your schema

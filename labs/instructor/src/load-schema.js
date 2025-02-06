@@ -7,5 +7,5 @@ import { resolve } from 'node:path';
  * @returns {String}
  */
 export function loadSchema(path) {
-	return readFileSync(resolve(process.cwd(), path));
+	return readFileSync(resolve(process.cwd(), path), {encoding: 'utf-8'});
 }

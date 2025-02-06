@@ -1,7 +1,56 @@
 type Query {
+	# queryName: return type of the query
 	sayHello: HelloWorld
+	sayHelloAsAString: String
 }
 
 type HelloWorld {
 	message: String
 }
+
+# Scalar values:
+# String
+# Int
+# Float
+# Boolean
+# ID
+
+"Modeling a Person"
+type Person {
+	"The Person's first name"
+	firstName: String
+
+	"""
+	The Person's last name
+	There could be a lot of data here
+	"""
+	lastName: String
+	id: Int
+}
+
+type Nullable {
+	"nullableValue can be null"
+	nullableValue: String
+
+	"notNullable canNOT be null"
+	notNullable: String!
+}
+
+type Department {
+	employees1: [Person]
+
+	"Array itself could be null, but if present it can't be empty"
+	employees2: [Person!]
+
+	"Must have the array, but it could be empty, could also contain null"
+	employees3: [Person]!
+
+	"""
+	Must have an array
+	The array could be empty or 
+	The array could have People 
+	The array cannot contain null
+	"""
+	employees4: [Person!]!
+}
+

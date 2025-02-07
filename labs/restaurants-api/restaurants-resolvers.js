@@ -13,10 +13,25 @@ export const resolvers = {
 			return saveData(data);
 		},
 	},
+	// implement code to return an array of Restaurant objects
 };
 
 let data = {
-	restaurants: [],
+	restaurants: [
+		{
+			id: '1',
+			name: 'Stamna Taverna',
+			description: 'Good Greek food'
+		},
+		{
+			id: '2',
+			name: 'Kim\'s Sushi'
+		},
+		{
+			id: '3',
+			name: 'Ruthie\'s BBQ'
+		}
+	],
 	addresses: [],
 	menuItems: [],
 };

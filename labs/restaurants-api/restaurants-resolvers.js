@@ -12,8 +12,8 @@ export const resolvers = {
 		saveData: () => {
 			return saveData(data);
 		},
+		// implement code to return an array of Restaurant objects
 	},
-	// implement code to return an array of Restaurant objects
 };
 
 let data = {

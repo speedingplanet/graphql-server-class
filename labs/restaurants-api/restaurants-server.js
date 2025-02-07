@@ -1,7 +1,7 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { resolvers } from './restaurants-resolvers.js';
-import { loadSchema } from '../src/load-schema.js';
+import { loadSchema } from './load-schema.js';
 
 const typeDefs = loadSchema('./restaurants-api/restaurants-schema.graphql');
 

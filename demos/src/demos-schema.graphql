@@ -1,0 +1,36 @@
+type Query {
+  helloWorldObject: Greeting
+	helloWorld: String
+	showNullables: [Nullable]
+	customResolver: [PersonWithDateOfBirth]
+	queryWithArgs(lastName: String!): PersonWithDateOfBirth
+	customScalar: StartsWithT
+	customScalarError: StartsWithT
+	people: [PersonWithDateOfBirth]
+	searchPeople(firstName: String, lastName: String): [PersonWithDateOfBirth]
+	searchPeopleWithCriteria(criteria: PeopleSearchCriteria): [PersonWithDateOfBirth]
+}
+
+"A standard Greeting"
+type Greeting {
+	"The content of the greeting"
+  content: String
+}
+
+type Nullable {
+	nullable: String
+	notNullable: String!
+}
+
+type PersonWithDateOfBirth {
+	firstName: String!
+	lastName: String!
+	dateOfBirth: String!
+}
+
+scalar StartsWithT
+
+input PeopleSearchCriteria {
+	firstName: String
+	lastName: String
+}

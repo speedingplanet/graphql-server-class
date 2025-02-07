@@ -8,6 +8,7 @@
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
 		"start": "node index.js",
+		"start:watch": "nodemon index.js",
 		"test": "echo \"[DEMOS] Error: no test specified\" && exit 1"
 	},
 	"keywords": [],

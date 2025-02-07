@@ -1,35 +1,16 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
+import { loadSchema } from './src/load-schema.js';
+import { resolvers } from './src/demos-resolvers.js';
 
-const typeDefs = `#graphql
-
-type Greeting {
-  message: String
-}
-
-type Query {
-  greeting: Greeting
-}
-
-`;
-
-const greetingMessage = {
-	message: "Successful test!",
-};
-
-const resolvers = {
-	Query: {
-		greeting: () => greetingMessage,
-	},
-};
-
+const typeDefs = loadSchema('src/demos-schema.graphql');
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
 });
 
 const { url } = await startStandaloneServer(server, {
-	listen: { port: 4000 },
+	listen: { port: 3999 },
 });
 
 console.log(`🚀  Server ready at: ${url}`);

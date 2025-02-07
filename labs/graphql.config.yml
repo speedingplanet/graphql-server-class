@@ -1,0 +1,8 @@
+# Mainly for IDE, code management purposes
+# This is the one file that is the schema with appropriate definitions
+# schema: src/hello-world-server/hello-world.graphql
+schema: restaurants-api/restaurants-schema.graphql
+
+# All the rest of these implicitly look to the schema for autocomplete, etc.
+#documents: 
+

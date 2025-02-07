@@ -5,6 +5,17 @@ type Query {
 	backupData: String
 }
 
+# Start here
+# enum Cuisine
+# Indian, Italian, Pizza, Japanese, Sushi, Chinese, Mexican, Cuban, Jamaican, Ethiopian, Thai, Vietnamese, Korean
+
+# We'll implement Addresses as well
+# street, String
+# city, String
+# state, String
+# zip, String
+
+# And then bring them together in Restaurant
 # Let's implement Restaurants, at a minimal level first:
 # id, String, required
 # name, String, required
@@ -13,14 +24,6 @@ type Query {
 # description, String
 # address, Address
 
-# We'll implement Address as well
-# street, String
-# city, String
-# state, String
-# zip, String
-
-# enum Cuisine
-# Indian, Italian, Pizza, Japanese, Sushi, Chinese, Mexican, Cuban, Jamaican, Ethiopian, Thai, Vietnamese, Korean
 
 # type Calendar {
 # 	dayNames: DaysOfTheWeek

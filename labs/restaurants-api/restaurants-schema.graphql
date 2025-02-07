@@ -4,6 +4,8 @@ type Query {
 	saveData: String
 	backupData: String
 	# Add restaurants as a queryable object
+	"The name of this field is the name of the JSON field for the data"
+	restaurants: [Restaurant]!
 }
 
 # Start here
@@ -15,6 +17,21 @@ type Query {
 # city, String
 # state, String
 # zip, String
+
+"The Address type"
+type Address {
+	"The street field"
+	street: String
+	city: String
+	"Assumes US States"
+	state: String
+
+	"""
+	This represents either a regular *ZIP* Code
+	or the new and fancy __ZIP+4__ Code
+	"""
+	zip: String
+}
 
 # And then bring them together in Restaurant
 # Let's implement Restaurants, at a minimal level first:
@@ -28,6 +45,7 @@ type Restaurant {
 	id: String!
 	name: String!
 	description: String
+	address: Address
 }
 
 

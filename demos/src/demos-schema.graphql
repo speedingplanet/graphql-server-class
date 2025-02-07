@@ -8,7 +8,12 @@ type Query {
 	customScalarError: StartsWithT
 	people: [PersonWithDateOfBirth]
 	searchPeople(firstName: String, lastName: String): [PersonWithDateOfBirth]
-	searchPeopleWithCriteria(criteria: PeopleSearchCriteria): [PersonWithDateOfBirth]
+	searchPeopleWithCriteria(xyz: PeopleSearchCriteria): [PersonWithDateOfBirth]
+}
+
+type Mutation {
+	addPerson(firstName: String!, lastName: String!, dateOfBirth: String): PersonWithDateOfBirth
+	addPersonWithInput(person: NewPerson): PersonWithDateOfBirth
 }
 
 "A standard Greeting"
@@ -25,7 +30,7 @@ type Nullable {
 type PersonWithDateOfBirth {
 	firstName: String!
 	lastName: String!
-	dateOfBirth: String!
+	dateOfBirth: String
 }
 
 scalar StartsWithT
@@ -33,4 +38,10 @@ scalar StartsWithT
 input PeopleSearchCriteria {
 	firstName: String
 	lastName: String
+}
+
+input NewPerson {
+	firstName: String!, 
+	lastName: String!, 
+	dateOfBirth: String
 }

@@ -19,6 +19,11 @@ export const resolvers = {
 		searchPeople,
 		searchPeopleWithCriteria,
 	},
+	Mutation: {
+		addPerson,
+		addPersonWithInput
+	},
+
 	PersonWithDateOfBirth: {
 		dateOfBirth(parent) {
 			if (parent.dateOfBirth instanceof Date) {
@@ -31,6 +36,25 @@ export const resolvers = {
 	StartsWithT: startsWithTScalar,
 };
 
+function addPerson(parent, args) {
+	let person = {
+		firstName: args.firstName,
+		lastName: args.lastName,
+		dateOfBirth: args.dateOfBirth || null
+	}
+
+	peopleWithDatesOfBirth.push(person)
+
+	return person;
+}
+
+function addPersonWithInput(parent, {person}) {
+	
+	peopleWithDatesOfBirth.push(person)
+
+	return person;
+}
+
 function searchPeople(parent, { firstName, lastName }) {
 	let searchObj = {};
 	if (firstName) searchObj.firstName = firstName;
@@ -39,8 +63,8 @@ function searchPeople(parent, { firstName, lastName }) {
 	return _filter(peopleWithDatesOfBirth, searchObj);
 }
 
-function searchPeopleWithCriteria(parent, {criteria}) {
-	return _filter(peopleWithDatesOfBirth, criteria);
+function searchPeopleWithCriteria(parent, {xyz}) {
+	return _filter(peopleWithDatesOfBirth, xyz);
 }
 
 const peopleWithDatesOfBirth = [
